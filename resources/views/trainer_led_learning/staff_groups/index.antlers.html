@@ -1,0 +1,17 @@
+<h1 class="text-xl font-bold">Taxonomy Slug Bug</h1>
+
+<h2 class="text-lg font-bold">Staff groups (taxonomy)</h2>
+<ul class="list-disc">
+    {{ terms }}
+        <li>
+            <a href="{{ url }}" class="underline">{{ title }}</a>
+            <ul class="list-disc ms-6">
+                {{ entries }}
+                    <li>
+                        <a href="{{ url }}" class="underline">{{ title }}</a>
+                    </li>
+                {{ /entries }}
+            </ul>
+        </li>
+    {{ /terms }}
+</ul>

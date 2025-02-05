@@ -1,0 +1,18 @@
+<h1 class="text-xl font-bold">Taxonomy Slug Bug</h1>
+
+<h2 class="text-lg font-bold">Staff groups (taxonomy)</h2>
+<ul class="list-disc">
+    {{ taxonomy:staff_groups collection="trainer_led_learning" }}
+        <li><a href="{{ url }}" class="underline">{{ title }}</a></li>
+    {{ /taxonomy:staff_groups }}
+</ul>
+
+{{ collection:trainer_led_learning as="tll" }}
+    <h2 class="text-lg font-bold">Trainer led learning (collection)</h2>
+    <ul class="list-disc">
+    {{ tll }}
+        <li><a href="{{ url }}" class="underline">{{ title }}</a></li>
+    {{ /tll }}
+    </ul>
+
+{{ /collection:trainer_led_learning }}
